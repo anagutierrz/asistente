@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asistente | Operations System - AI Appointment Closer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .bg-gradient-custom {
+            background: linear-gradient(135deg, #6d28d9 0%, #f97316 100%);
+        }
+        .text-gradient {
+            background: linear-gradient(135deg, #6d28d9 0%, #f97316 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900">
+
+    <nav class="flex justify-between items-center py-6 px-10 bg-white border-b">
+        <div class="flex items-center gap-2">
+            <div class="w-8 h-8 bg-gradient-custom rounded-lg flex items-center justify-center text-white font-bold">✓</div>
+            <span class="text-xl font-bold tracking-tight">Asistente <span class="font-light text-slate-500 text-sm italic">OPERATIONS SYSTEM</span></span>
+        </div>
+        <div class="hidden md:flex gap-8 font-medium text-slate-600">
+            <a href="#solucion" class="hover:text-purple-600 transition">Solución</a>
+            <a href="#beneficios" class="hover:text-purple-600 transition">Beneficios</a>
+            <a href="#precios" class="hover:text-purple-600 transition">Planes</a>
+        </div>
+        <a href="#" class="bg-slate-900 text-white px-6 py-2 rounded-full font-semibold hover:bg-slate-800 transition">Solicitar Demo</a>
+    </nav>
+
+    <header class="py-20 px-10 max-w-7xl mx-auto text-center">
+        <h1 class="text-5xl md:text-7xl font-extrabold mb-6 tracking-tight text-slate-900">
+            No pierdas ni un solo <br>
+            <span class="text-gradient font-black underline italic">paciente en WhatsApp</span>
+        </h1>
+        <p class="text-xl text-slate-600 mb-10 max-w-2xl mx-auto">
+            El sistema operativo de citas que convierte consultas en agenda llena 24/7. Inteligencia artificial diseñada para clínicas de estética y salud.
+        </p>
+        <div class="flex flex-col md:flex-row justify-center gap-4">
+            <button class="bg-gradient-custom text-white px-10 py-4 rounded-xl text-lg font-bold shadow-lg hover:opacity-90 transition transform hover:scale-105">
+                Instalar en mi Clínica
+            </button>
+            <button class="bg-white border-2 border-slate-200 px-10 py-4 rounded-xl text-lg font-bold hover:bg-slate-50 transition">
+                Ver Video Demo
+            </button>
+        </div>
+        <div class="mt-16 relative">
+            <div class="absolute inset-0 bg-purple-200 blur-3xl opacity-30 rounded-full"></div>
+            <div class="relative bg-white border border-slate-200 rounded-3xl p-4 shadow-2xl">
+                <img src="https://via.placeholder.com/1200x600?text=Dashboard+Asistente+Operations+System" alt="Dashboard" class="rounded-2xl">
+            </div>
+        </div>
+    </header>
+
+    <section class="bg-white py-16 border-y border-slate-100">
+        <div class="max-w-7xl mx-auto px-10 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div>
+                <p class="text-4xl font-bold text-gradient">+95%</p>
+                <p class="text-slate-500 uppercase text-xs font-bold tracking-widest mt-2">Tasa de Respuesta</p>
+            </div>
+            <div>
+                <p class="text-4xl font-bold text-gradient">24/7</p>
+                <p class="text-slate-500 uppercase text-xs font-bold tracking-widest mt-2">Atención Activa</p>
+            </div>
+            <div>
+                <p class="text-4xl font-bold text-gradient">-40%</p>
+                <p class="text-slate-500 uppercase text-xs font-bold tracking-widest mt-2">Ausentismo (No-Show)</p>
+            </div>
+            <div>
+                <p class="text-4xl font-bold text-gradient">Instantánea</p>
+                <p class="text-slate-500 uppercase text-xs font-bold tracking-widest mt-2">Integración CRM</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="solucion" class="py-20 px-10 max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl font-bold">Hecho para escalar centros estéticos</h2>
+            <p class="text-slate-500">Tecnología senior para clínicas que valoran el tiempo.</p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-10 text-center">
+            <div class="p-8 bg-white rounded-3xl border border-slate-100 hover:shadow-xl transition">
+                <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mx-auto mb-6 text-purple-600 font-bold text-xl">1</div>
+                <h3 class="text-xl font-bold mb-4">Agenda en Segundos</h3>
+                <p class="text-slate-600">La IA lee tu disponibilidad y cierra la cita directamente en tu calendario sin errores humanos.</p>
+            </div>
+            <div class="p-8 bg-white rounded-3xl border border-slate-100 hover:shadow-xl transition">
+                <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mx-auto mb-6 text-orange-600 font-bold text-xl">2</div>
+                <h3 class="text-xl font-bold mb-4">Calificación IA</h3>
+                <p class="text-slate-600">Filtra curiosos y prioriza pacientes interesados en tratamientos de alto valor (Botox, Láser, Rellenos).</p>
+            </div>
+            <div class="p-8 bg-white rounded-3xl border border-slate-100 hover:shadow-xl transition">
+                <div class="w-12 h-12 bg-slate-100 rounded-lg flex items-center justify-center mx-auto mb-6 text-slate-600 font-bold text-xl">3</div>
+                <h3 class="text-xl font-bold mb-4">Pagos Automáticos</h3>
+                <p class="text-slate-600">Cobra señas de reserva por WhatsApp antes de confirmar la cita para garantizar la asistencia.</p>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
