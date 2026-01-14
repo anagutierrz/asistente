@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Asistente | Operations System - AI Appointment Closer</title>
+    <title>Planes y Precios | Asistente Operations System</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
@@ -16,91 +16,125 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
+        .border-gradient {
+            border-image: linear-gradient(135deg, #6d28d9 0%, #f97316 100%) 1;
+        }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-900">
 
     <nav class="flex justify-between items-center py-6 px-10 bg-white border-b">
-        <div class="flex items-center gap-2">
+        <a href="index.html" class="flex items-center gap-2">
             <div class="w-8 h-8 bg-gradient-custom rounded-lg flex items-center justify-center text-white font-bold">✓</div>
-            <span class="text-xl font-bold tracking-tight">Asistente <span class="font-light text-slate-500 text-sm italic">OPERATIONS SYSTEM</span></span>
-        </div>
+            <span class="text-xl font-bold tracking-tight">Asistente <span class="font-light text-slate-500 text-sm italic uppercase">Operations System</span></span>
+        </a>
         <div class="hidden md:flex gap-8 font-medium text-slate-600">
-            <a href="#solucion" class="hover:text-purple-600 transition">Solución</a>
-            <a href="#beneficios" class="hover:text-purple-600 transition">Beneficios</a>
-            <a href="#precios" class="hover:text-purple-600 transition">Planes</a>
+            <a href="index.html" class="hover:text-purple-600 transition">Inicio</a>
+            <a href="index.html#solucion" class="hover:text-purple-600 transition">Solución</a>
+            <a href="#" class="text-purple-600 font-bold">Planes</a>
         </div>
-        <a href="#" class="bg-slate-900 text-white px-6 py-2 rounded-full font-semibold hover:bg-slate-800 transition">Solicitar Demo</a>
+        <a href="#" class="bg-slate-900 text-white px-6 py-2 rounded-full font-semibold hover:bg-slate-800 transition">Probar Gratis</a>
     </nav>
 
-    <header class="py-20 px-10 max-w-7xl mx-auto text-center">
-        <h1 class="text-5xl md:text-7xl font-extrabold mb-6 tracking-tight text-slate-900">
-            No pierdas ni un solo <br>
-            <span class="text-gradient font-black underline italic">paciente en WhatsApp</span>
-        </h1>
-        <p class="text-xl text-slate-600 mb-10 max-w-2xl mx-auto">
-            El sistema operativo de citas que convierte consultas en agenda llena 24/7. Inteligencia artificial diseñada para clínicas de estética y salud.
+    <header class="py-16 px-10 max-w-7xl mx-auto text-center">
+        <h1 class="text-4xl md:text-6xl font-extrabold mb-4 tracking-tight">Inversión Inteligente para tu <span class="text-gradient">Crecimiento</span></h1>
+        <p class="text-lg text-slate-600 max-w-2xl mx-auto">
+            Elige el plan que mejor se adapte al volumen de tu clínica. Sin contratos ocultos, cancela cuando quieras.
         </p>
-        <div class="flex flex-col md:flex-row justify-center gap-4">
-            <button class="bg-gradient-custom text-white px-10 py-4 rounded-xl text-lg font-bold shadow-lg hover:opacity-90 transition transform hover:scale-105">
-                Instalar en mi Clínica
-            </button>
-            <button class="bg-white border-2 border-slate-200 px-10 py-4 rounded-xl text-lg font-bold hover:bg-slate-50 transition">
-                Ver Video Demo
-            </button>
-        </div>
-        <div class="mt-16 relative">
-            <div class="absolute inset-0 bg-purple-200 blur-3xl opacity-30 rounded-full"></div>
-            <div class="relative bg-white border border-slate-200 rounded-3xl p-4 shadow-2xl">
-                <img src="https://via.placeholder.com/1200x600?text=Dashboard+Asistente+Operations+System" alt="Dashboard" class="rounded-2xl">
+
+        <div class="flex items-center justify-center mt-12 gap-4">
+            <span class="text-sm font-semibold text-slate-500">Pago Mensual</span>
+            <div class="relative inline-flex h-6 w-12 items-center rounded-full bg-slate-200 cursor-pointer">
+                <span class="inline-block h-4 w-4 translate-x-1 rounded-full bg-white transition shadow-sm"></span>
             </div>
+            <span class="text-sm font-semibold text-slate-900">Pago Anual <span class="ml-2 inline-block bg-green-100 text-green-700 text-[10px] px-2 py-0.5 rounded-full uppercase tracking-wider font-bold">2 Meses Gratis</span></span>
         </div>
     </header>
 
-    <section class="bg-white py-16 border-y border-slate-100">
-        <div class="max-w-7xl mx-auto px-10 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            <div>
-                <p class="text-4xl font-bold text-gradient">+95%</p>
-                <p class="text-slate-500 uppercase text-xs font-bold tracking-widest mt-2">Tasa de Respuesta</p>
+    <main class="max-w-7xl mx-auto px-10 pb-24">
+        <div class="grid md:grid-cols-3 gap-8">
+            
+            <div class="bg-white p-8 rounded-[2rem] border border-slate-200 flex flex-col h-full">
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-2">Basic Core</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed">Ideal para profesionales independientes o consultorios en crecimiento.</p>
+                </div>
+                <div class="mb-8">
+                    <span class="text-5xl font-extrabold tracking-tight">$99</span>
+                    <span class="text-slate-400 font-medium">/mes</span>
+                </div>
+                <ul class="space-y-4 mb-10 flex-grow">
+                    <li class="flex items-start gap-3 text-sm text-slate-600 italic">
+                        <span class="text-green-500 font-bold">✓</span> Hasta 100 citas mensuales confirmadas.
+                    </li>
+                    <li class="flex items-start gap-3 text-sm text-slate-600 italic">
+                        <span class="text-green-500 font-bold">✓</span> Conexión con 1 Calendario.
+                    </li>
+                    <li class="flex items-start gap-3 text-sm text-slate-600 italic">
+                        <span class="text-green-500 font-bold">✓</span> Integración WhatsApp Business API.
+                    </li>
+                    <li class="flex items-start gap-3 text-sm text-slate-400 line-through">
+                        Pagos de reserva integrados.
+                    </li>
+                </ul>
+                <button class="w-full py-4 rounded-xl border-2 border-slate-900 font-bold hover:bg-slate-900 hover:text-white transition-all">Seleccionar Basic</button>
             </div>
-            <div>
-                <p class="text-4xl font-bold text-gradient">24/7</p>
-                <p class="text-slate-500 uppercase text-xs font-bold tracking-widest mt-2">Atención Activa</p>
-            </div>
-            <div>
-                <p class="text-4xl font-bold text-gradient">-40%</p>
-                <p class="text-slate-500 uppercase text-xs font-bold tracking-widest mt-2">Ausentismo (No-Show)</p>
-            </div>
-            <div>
-                <p class="text-4xl font-bold text-gradient">Instantánea</p>
-                <p class="text-slate-500 uppercase text-xs font-bold tracking-widest mt-2">Integración CRM</p>
-            </div>
-        </div>
-    </section>
 
-    <section id="solucion" class="py-20 px-10 max-w-7xl mx-auto">
-        <div class="text-center mb-16">
-            <h2 class="text-3xl font-bold">Hecho para escalar centros estéticos</h2>
-            <p class="text-slate-500">Tecnología senior para clínicas que valoran el tiempo.</p>
+            <div class="bg-white p-8 rounded-[2rem] border-2 border-purple-500 shadow-2xl relative transform md:-translate-y-4 flex flex-col h-full">
+                <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-custom text-white px-6 py-1 rounded-full text-[10px] font-black uppercase tracking-[0.2em]">Recomendado</div>
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-2">Pro Operations</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed">El estándar para clínicas estéticas que quieren automatización total.</p>
+                </div>
+                <div class="mb-8">
+                    <span class="text-5xl font-extrabold tracking-tight">$199</span>
+                    <span class="text-slate-400 font-medium">/mes</span>
+                </div>
+                <ul class="space-y-4 mb-10 flex-grow">
+                    <li class="flex items-start gap-3 text-sm text-slate-700 font-medium">
+                        <span class="text-purple-600 font-bold">✓</span> Citas ILIMITADAS.
+                    </li>
+                    <li class="flex items-start gap-3 text-sm text-slate-700 font-medium">
+                        <span class="text-purple-600 font-bold">✓</span> Gestión de Pagos (Stripe/Paypal).
+                    </li>
+                    <li class="flex items-start gap-3 text-sm text-slate-700 font-medium">
+                        <span class="text-purple-600 font-bold">✓</span> IA de Re-engagement (Pacientes inactivos).
+                    </li>
+                    <li class="flex items-start gap-3 text-sm text-slate-700 font-medium">
+                        <span class="text-purple-600 font-bold">✓</span> Multi-especialista (Hasta 5 doctores).
+                    </li>
+                </ul>
+                <button class="w-full py-4 rounded-xl bg-gradient-custom text-white font-bold hover:shadow-lg transition-all transform hover:scale-[1.02]">Activar Pro Now</button>
+            </div>
+
+            <div class="bg-slate-900 p-8 rounded-[2rem] text-white flex flex-col h-full">
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold mb-2 text-orange-400">Custom Network</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Soluciones corporativas para franquicias o múltiples sedes.</p>
+                </div>
+                <div class="mb-8">
+                    <span class="text-4xl font-extrabold tracking-tight italic text-white underline decoration-orange-500 underline-offset-8 uppercase">A Medida</span>
+                </div>
+                <ul class="space-y-4 mb-10 flex-grow">
+                    <li class="flex items-start gap-3 text-sm text-slate-300">
+                        <span class="text-orange-400 font-bold">✓</span> Sedes y usuarios ilimitados.
+                    </li>
+                    <li class="flex items-start gap-3 text-sm text-slate-300">
+                        <span class="text-orange-400 font-bold">✓</span> Integración API directa con HIS clínico.
+                    </li>
+                    <li class="flex items-start gap-3 text-sm text-slate-300">
+                        <span class="text-orange-400 font-bold">✓</span> Soporte técnico 24/7 dedicado.
+                    </li>
+                </ul>
+                <button class="w-full py-4 rounded-xl bg-white text-slate-900 font-bold hover:bg-slate-200 transition-all">Hablar con Consultor</button>
+            </div>
+
         </div>
-        <div class="grid md:grid-cols-3 gap-10 text-center">
-            <div class="p-8 bg-white rounded-3xl border border-slate-100 hover:shadow-xl transition">
-                <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mx-auto mb-6 text-purple-600 font-bold text-xl">1</div>
-                <h3 class="text-xl font-bold mb-4">Agenda en Segundos</h3>
-                <p class="text-slate-600">La IA lee tu disponibilidad y cierra la cita directamente en tu calendario sin errores humanos.</p>
-            </div>
-            <div class="p-8 bg-white rounded-3xl border border-slate-100 hover:shadow-xl transition">
-                <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mx-auto mb-6 text-orange-600 font-bold text-xl">2</div>
-                <h3 class="text-xl font-bold mb-4">Calificación IA</h3>
-                <p class="text-slate-600">Filtra curiosos y prioriza pacientes interesados en tratamientos de alto valor (Botox, Láser, Rellenos).</p>
-            </div>
-            <div class="p-8 bg-white rounded-3xl border border-slate-100 hover:shadow-xl transition">
-                <div class="w-12 h-12 bg-slate-100 rounded-lg flex items-center justify-center mx-auto mb-6 text-slate-600 font-bold text-xl">3</div>
-                <h3 class="text-xl font-bold mb-4">Pagos Automáticos</h3>
-                <p class="text-slate-600">Cobra señas de reserva por WhatsApp antes de confirmar la cita para garantizar la asistencia.</p>
-            </div>
-        </div>
-    </section>
+    </main>
+
+    <footer class="py-10 text-center text-slate-400 text-xs border-t bg-white">
+        © 2026 Asistente Operations System - Una solución de AI Appointment Closer para el sector Salud & Estética.
+    </footer>
 
 </body>
 </html>
