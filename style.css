@@ -1,126 +1,34 @@
-/* ASISTENTE OPERATIONS SYSTEM 
-   CSS Maestro de Identidad Visual
-*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,700;0,900;1,400;1,700&display=swap');
 
 :root {
-    /* Paleta de Colores Extraída del Logo */
     --brand-purple: #7c2ae8;
     --brand-orange: #fa8c47;
     --brand-gradient: linear-gradient(135deg, #7c2ae8 0%, #fa8c47 100%);
-    
-    /* Colores de Interfaz UI */
-    --ui-bg: #fcfcfc;
-    --ui-card: #ffffff;
-    --ui-text-main: #1a1a1a;
-    --ui-text-secondary: #64748b;
-    --ui-border: #f1f5f9;
-    --ui-dark-bg: #1a1a1a; /* Para secciones de Dashboard oscuro */
 }
 
-/* Configuración de Tipografía */
-body {
-    font-family: 'Inter', sans-serif;
-    background-color: var(--ui-bg);
-    color: var(--ui-text-main);
-}
+body { font-family: 'Inter', sans-serif; background-color: #fcfcfc; color: #1a1a1a; }
 
-/* --- UTILIDADES DE MARCA --- */
-
-/* Gradiente para Fondos */
-.bg-gradient-asistente {
-    background: var(--brand-gradient) !important;
-}
-
-/* Gradiente para Texto (Titulares Robustos) */
-.text-gradient-asistente {
+/* Identidad Visual */
+.text-gradient {
     background: var(--brand-gradient);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    display: inline-block;
 }
 
-/* Bordes con Gradiente (Módulo de Precios Pro) */
-.border-asistente {
-    border: 2px solid transparent;
-    background: linear-gradient(white, white) padding-box, var(--brand-gradient) border-box;
-}
+.bg-brand-gradient { background: var(--brand-gradient); }
 
-/* Sombras de Marca */
-.shadow-brand {
-    box-shadow: 0 10px 30px -10px rgba(124, 42, 232, 0.3);
-}
-
-/* --- COMPONENTES UI --- */
-
-/* Botón Principal Robusto */
-.btn-primary-asistente {
+/* Botones Robustos sin Emojis */
+.btn-primary {
     background: var(--brand-gradient);
     color: white;
     font-weight: 900;
     text-transform: uppercase;
     letter-spacing: 0.05em;
     padding: 1.25rem 2.5rem;
-    border-radius: 1.5rem;
+    border-radius: 1.25rem;
     transition: all 0.3s ease;
-    box-shadow: 0 10px 20px -5px rgba(124, 42, 232, 0.4);
     border: none;
-    cursor: pointer;
+    box-shadow: 0 10px 20px -10px rgba(124, 42, 232, 0.4);
 }
 
-.btn-primary-asistente:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 15px 30px -5px rgba(124, 42, 232, 0.5);
-    opacity: 0.95;
-}
-
-/* Tarjetas de Dashboard y Ajustes */
-.card-asistente {
-    background: var(--ui-card);
-    border: 1px solid var(--ui-border);
-    border-radius: 2.5rem;
-    padding: 2.5rem;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card-asistente:hover {
-    box-shadow: 0 20px 40px -20px rgba(0,0,0,0.05);
-}
-
-/* Sidebar Navigation Active State */
-.nav-link-active {
-    background: rgba(124, 42, 232, 0.05);
-    color: var(--brand-purple);
-    border-right: 4px solid var(--brand-purple);
-    font-weight: 700;
-}
-
-/* Inputs de Ajustes */
-input:focus, textarea:focus {
-    border-color: var(--brand-purple) !important;
-    outline: none;
-    box-shadow: 0 0 0 4px rgba(124, 42, 232, 0.1);
-}
-
-/* Animación de IA Activa */
-.status-pulse {
-    width: 8px;
-    height: 8px;
-    background-color: #22c55e;
-    border-radius: 50%;
-    position: relative;
-}
-
-.status-pulse::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: #22c55e;
-    border-radius: 50%;
-    animation: pulse 1.5s infinite;
-}
-
-@keyframes pulse {
-    0% { transform: scale(1); opacity: 0.8; }
-    100% { transform: scale(3); opacity: 0; }
-}
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 15px 30px -10px rgba(124, 42, 232, 0.5); }
