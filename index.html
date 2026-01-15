@@ -3,150 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Asistente | Operations System - Infraestructura de Agendamiento IA</title>
+    <meta name="description" content="Asistente Operations System: IA que agenda citas por WhatsApp 24/7 para clínicas y estéticas.">
+    <title>Asistente | Operations System - Agendamiento IA 24/7</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
-    <style>
-        body { font-family: 'Inter', sans-serif; }
-        .bg-gradient-asistente { background: linear-gradient(135deg, #7c2ae8 0%, #fa8c47 100%); }
-        .text-gradient-asistente {
-            background: linear-gradient(135deg, #7c2ae8 0%, #fa8c47 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .glass-panel { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(10px); }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-[#fcfcfc] text-[#1a1a1a] antialiased">
-
+<body class="bg-slate-50 antialiased">
     <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-100">
-        <div class="max-w-7xl mx-auto flex justify-between items-center py-5 px-8">
-            <div class="flex items-center gap-3">
-                <div class="w-10 h-10 bg-gradient-asistente rounded-xl flex items-center justify-center text-white shadow-lg">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+        <div class="max-w-7xl mx-auto flex justify-between items-center py-4 px-6">
+            <a href="index.html" class="flex items-center gap-2">
+                <div class="w-8 h-8 md:w-10 md:h-10 bg-gradient-asistente rounded-xl flex items-center justify-center text-white shadow-lg">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 md:h-6 md:w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
                     </svg>
                 </div>
                 <div class="flex flex-col leading-none">
-                    <span class="text-2xl font-[900] tracking-tighter uppercase">Asistente</span>
-                    <span class="text-[9px] font-bold text-slate-400 uppercase tracking-[0.2em] italic">Operations System</span>
+                    <span class="text-lg md:text-xl font-black uppercase">Asistente</span>
+                    <span class="text-[8px] font-bold text-slate-400 tracking-widest italic">Operations System</span>
                 </div>
+            </a>
+            <div class="hidden md:flex gap-8 font-bold text-[11px] uppercase tracking-widest text-slate-500">
+                <a href="#solucion" class="hover:text-purple-600 transition">Tecnología</a>
+                <a href="precios.html" class="hover:text-purple-600 transition">Planes</a>
             </div>
-
-            <div class="hidden lg:flex gap-10 font-bold text-[11px] uppercase tracking-[0.2em] text-slate-500">
-                <a href="#tecnologia" class="hover:text-purple-600 transition">Tecnología</a>
-                <a href="#metodologia" class="hover:text-purple-600 transition">Metodología</a>
-                <a href="precios.html" class="hover:text-purple-600 transition font-black">Precios</a>
-            </div>
-
-            <a href="dashboard.html" class="bg-[#1a1a1a] text-white px-8 py-3 rounded-full font-bold text-sm hover:bg-slate-800 shadow-xl transition">
-                Acceso Clínica
+            <a href="login.html" class="bg-slate-900 text-white px-5 py-2 md:px-8 md:py-3 rounded-full font-bold text-xs md:text-sm shadow-xl transition active:scale-95">
+                Login Clínica
             </a>
         </div>
     </nav>
 
-    <header class="relative pt-56 pb-32 px-6">
-        <div class="max-w-6xl mx-auto text-center relative z-10">
-            <span class="inline-block border border-purple-200 text-purple-600 text-[10px] font-black uppercase tracking-[0.4em] px-5 py-2 rounded-full mb-8 bg-purple-50">
-                Performance para Centros de Estética
-            </span>
-            <h1 class="text-6xl md:text-[110px] font-[900] tracking-tighter leading-[0.85] mb-12">
-                Maximiza tu agenda en <br>
-                <span class="text-gradient-asistente italic">Piloto Automático</span>
-            </h1>
-            
-            <p class="text-xl md:text-2xl text-slate-500 max-w-3xl mx-auto font-medium mb-14 leading-relaxed">
-                No pierdas más leads por falta de respuesta. Nuestro asistente de IA gestiona el flujo conversacional completo en WhatsApp: <span class="text-slate-900 font-bold underline decoration-orange-400 underline-offset-4">atiende, califica y agenda</span> citas confirmadas 24/7.
-            </p>
-
-            <div class="flex flex-col sm:flex-row justify-center gap-6">
-                <a href="precios.html" class="bg-gradient-asistente text-white px-14 py-6 rounded-3xl text-xl font-[900] shadow-2xl hover:scale-105 transition active:scale-95">
-                    DESPLEGAR EN MI CLÍNICA
-                </a>
-                <button class="bg-white border-2 border-slate-200 text-[#1a1a1a] px-14 py-6 rounded-3xl text-xl font-[900] hover:bg-slate-50 transition shadow-sm">
-                    SOLICITAR AUDITORÍA IA
-                </button>
-            </div>
+    <header class="pt-32 md:pt-56 pb-20 px-6 text-center">
+        <h1 class="text-4xl md:text-[100px] font-[900] tracking-tighter leading-none mb-8">
+            Tu recepción en <br><span class="text-gradient-asistente italic">Piloto Automático</span>
+        </h1>
+        <p class="text-base md:text-xl text-slate-500 max-w-2xl mx-auto mb-10 leading-relaxed">
+            Convierte mensajes de WhatsApp en citas confirmadas 24/7 sin saturar a tu personal administrativo.
+        </p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+            <a href="precios.html" class="bg-gradient-asistente text-white px-10 py-5 rounded-2xl text-lg md:text-xl font-black shadow-2xl hover:scale-105 transition">
+                DESPLEGAR ASISTENTE
+            </a>
         </div>
     </header>
 
-    <section id="tecnologia" class="py-32 px-6 bg-white border-y border-slate-100">
-        <div class="max-w-7xl mx-auto">
-            <div class="text-center mb-20">
-                <h2 class="text-4xl md:text-5xl font-[900] tracking-tighter mb-4">Ingeniería Conversacional <span class="text-purple-600">Premium</span></h2>
-                <p class="text-slate-500 max-w-2xl mx-auto font-medium italic">Diseñado para resolver los puntos de dolor operativos más críticos del sector salud.</p>
+    <section id="solucion" class="py-20 bg-white border-y border-slate-100">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-12 text-center">
+            <div class="space-y-4">
+                <h3 class="font-black text-xl uppercase italic">Atención 24/7</h3>
+                <p class="text-slate-500 text-sm leading-relaxed">Responde al instante fuera del horario comercial, garantizando que ningún lead se pierda.</p>
             </div>
-
-            <div class="grid lg:grid-cols-2 gap-24 items-center">
-                <div class="space-y-12">
-                    <div class="group">
-                        <div class="flex items-center gap-4 mb-4">
-                            <div class="w-10 h-10 rounded-lg bg-purple-50 flex items-center justify-center text-purple-600 font-black">01</div>
-                            <h3 class="text-2xl font-black uppercase tracking-tight">Atención 24/7 sin Excepciones</h3>
-                        </div>
-                        <p class="text-slate-500 leading-relaxed pl-14">Elimina el "agujero negro" de mensajes sin responder durante noches y fines de semana. La IA mantiene la urgencia del paciente y cierra la cita en el momento de mayor interés.</p>
-                    </div>
-
-                    <div class="group">
-                        <div class="flex items-center gap-4 mb-4">
-                            <div class="w-10 h-10 rounded-lg bg-orange-50 flex items-center justify-center text-orange-600 font-black">02</div>
-                            <h3 class="text-2xl font-black uppercase tracking-tight">Calificación Clínica Inteligente</h3>
-                        </div>
-                        <p class="text-slate-500 leading-relaxed pl-14">El sistema no solo agenda; identifica el servicio, detecta la urgencia del paciente y califica si es de primera vez, entregando solo citas calificadas a tu equipo humano.</p>
-                    </div>
-
-                    <div class="group">
-                        <div class="flex items-center gap-4 mb-4">
-                            <div class="w-10 h-10 rounded-lg bg-green-50 flex items-center justify-center text-green-600 font-black">03</div>
-                            <h3 class="text-2xl font-black uppercase tracking-tight">Reducción Drástica de No-Show</h3>
-                        </div>
-                        <p class="text-slate-500 leading-relaxed pl-14">Sincronización bidireccional que envía confirmaciones, recordatorios y permite reprogramaciones automáticas, reduciendo las cancelaciones hasta en un 40%.</p>
-                    </div>
-                </div>
-
-                <div class="relative">
-                    <div class="bg-gradient-asistente absolute inset-0 rounded-[3rem] opacity-5 blur-3xl"></div>
-                    <div class="relative bg-[#1a1a1a] p-10 rounded-[3rem] shadow-2xl border border-white/5">
-                        <div class="flex items-center gap-2 mb-8">
-                            <div class="w-3 h-3 bg-red-500 rounded-full"></div>
-                            <div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
-                            <div class="w-3 h-3 bg-green-500 rounded-full"></div>
-                        </div>
-                        <div class="space-y-6">
-                            <div class="p-4 bg-white/5 rounded-2xl border border-white/10 italic text-sm text-slate-300 font-mono">
-                                <span class="text-purple-400">STATUS:</span> Analizando interés de paciente... <br>
-                                <span class="text-orange-400">ACTION:</span> Sugiriendo cita para Toxina Botulínica...
-                            </div>
-                            <div class="flex justify-between items-end border-t border-white/10 pt-6">
-                                <div>
-                                    <p class="text-[10px] text-slate-500 uppercase font-black tracking-widest">Ocupación Agenda</p>
-                                    <p class="text-4xl font-black text-white italic">92%</p>
-                                </div>
-                                <div class="text-right">
-                                    <p class="text-[10px] text-slate-500 uppercase font-black tracking-widest">Respuesta</p>
-                                    <p class="text-2xl font-black text-green-400 italic text-right">&lt; 10s</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="space-y-4">
+                <h3 class="font-black text-xl uppercase italic">Agendamiento IA</h3>
+                <p class="text-slate-500 text-sm leading-relaxed">Identifica el servicio y agenda según tu disponibilidad real de forma automática.</p>
+            </div>
+            <div class="space-y-4">
+                <h3 class="font-black text-xl uppercase italic">Menos No-Show</h3>
+                <p class="text-slate-500 text-sm leading-relaxed">Reduce cancelaciones mediante confirmaciones y recordatorios de alta precisión.</p>
             </div>
         </div>
     </section>
-
-    <section class="py-24 px-6 text-center bg-[#fcfcfc]">
-        <h2 class="text-4xl md:text-6xl font-black mb-8 tracking-tighter">¿Listo para escalar tu <br><span class="text-gradient-asistente">clínica al siguiente nivel?</span></h2>
-        <p class="text-slate-500 mb-12 max-w-xl mx-auto font-medium">Implementación garantizada en 3-5 días. Sin fricción, sin complicaciones técnicas.</p>
-        <a href="precios.html" class="bg-gradient-asistente text-white px-16 py-6 rounded-3xl text-2xl font-black shadow-2xl hover:scale-105 transition inline-block">
-            DESPLEGAR ASISTENTE OS
-        </a>
-    </section>
-
-    <footer class="py-12 border-t border-slate-100 bg-white text-center">
-        <p class="text-slate-400 text-[10px] font-black uppercase tracking-[0.3em] italic">
-            © 2026 Asistente Operations System - Infraestructura de Conversión para el Sector Estético.
-        </p>
-    </footer>
-
 </body>
 </html>
