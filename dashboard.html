@@ -2,37 +2,58 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Dashboard | Asistente OS</title>
+    <title>Admin | Asistente Operations System</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .bg-gradient-asistente { background: linear-gradient(135deg, #7c2ae8 0%, #fa8c47 100%); }
+    </style>
 </head>
-<body class="bg-slate-100 flex">
-    <aside class="w-64 h-screen bg-slate-900 text-white p-6">
-        <div class="font-bold mb-10">ASISTENTE OS</div>
-        <nav class="space-y-4">
-            <a href="#" class="block p-2 bg-purple-600 rounded">Resumen</a>
-            <a href="#" class="block p-2 text-slate-400">Mis Citas</a>
-            <a href="#" class="block p-2 text-slate-400">Configurar IA</a>
+<body class="bg-slate-100 flex h-screen overflow-hidden italic">
+    <aside class="w-64 bg-slate-900 text-white p-6 flex flex-col">
+        <div class="font-black text-xl tracking-tighter mb-12 uppercase">Asistente <span class="text-purple-500">OS</span></div>
+        <nav class="space-y-4 flex-grow">
+            <a href="#" class="block p-3 bg-gradient-asistente rounded-xl font-bold">Resumen</a>
+            <a href="#" class="block p-3 text-slate-400 hover:text-white transition">Configurar IA</a>
+            <a href="#" class="block p-3 text-slate-400 hover:text-white transition">Calendario</a>
         </nav>
+        <div class="text-[10px] text-slate-600 uppercase font-black tracking-widest">v 2.0.26</div>
     </aside>
 
-    <main class="flex-1 p-10">
-        <header class="flex justify-between mb-10 italic">
-            <h2 class="text-2xl font-bold italic">Panel de Control: Clínica Bella</h2>
-            <div class="text-green-500 font-bold italic underline">● IA ACTIVA Y AGENDANDO</div>
+    <main class="flex-1 p-10 overflow-y-auto">
+        <header class="flex justify-between items-center mb-10">
+            <h1 class="text-3xl font-black tracking-tighter uppercase text-slate-900 underline decoration-orange-500 decoration-4">Panel de Control</h1>
+            <div class="flex items-center gap-2">
+                <span class="relative flex h-3 w-3"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span><span class="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span></span>
+                <span class="text-xs font-bold uppercase text-slate-500">IA Activa</span>
+            </div>
         </header>
 
-        <div class="grid grid-cols-3 gap-6 mb-10">
-            <div class="bg-white p-6 rounded-3xl shadow-sm border border-slate-200">
-                <p class="text-slate-400 text-sm">Citas este mes</p>
-                <p class="text-4xl font-black italic">142</p>
+        <div class="grid grid-cols-4 gap-6 mb-10 text-center">
+            <div class="bg-white p-6 rounded-3xl shadow-sm">
+                <p class="text-[10px] font-black uppercase text-slate-400 tracking-widest mb-2 italic">Citas Agendadas</p>
+                <p class="text-4xl font-black">156</p>
             </div>
-            <div class="bg-white p-6 rounded-3xl shadow-sm border border-slate-200">
-                <p class="text-slate-400 text-sm">Ingresos Proyectados</p>
-                <p class="text-4xl font-black italic text-purple-600">$12,400</p>
+            <div class="bg-white p-6 rounded-3xl shadow-sm">
+                <p class="text-[10px] font-black uppercase text-slate-400 tracking-widest mb-2 italic">Conversión Chat</p>
+                <p class="text-4xl font-black text-purple-600">68%</p>
             </div>
-            <div class="bg-white p-6 rounded-3xl shadow-sm border border-slate-200">
-                <p class="text-slate-400 text-sm">Chats Respondidos</p>
-                <p class="text-4xl font-black italic">894</p>
+            <div class="bg-white p-6 rounded-3xl shadow-sm border-2 border-orange-500/20">
+                <p class="text-[10px] font-black uppercase text-slate-400 tracking-widest mb-2 italic">Ocupación Agenda</p>
+                <p class="text-4xl font-black">92%</p>
+            </div>
+            <div class="bg-white p-6 rounded-3xl shadow-sm">
+                <p class="text-[10px] font-black uppercase text-slate-400 tracking-widest mb-2 italic">Cancelaciones</p>
+                <p class="text-4xl font-black text-red-500">-22%</p>
+            </div>
+        </div>
+
+        <div class="bg-slate-900 rounded-[2rem] p-8 text-white">
+            <h2 class="text-xl font-bold mb-4 italic uppercase tracking-tighter text-orange-400">Estado de Implementación</h2>
+            <div class="flex gap-4">
+                <div class="flex-1 bg-white/5 p-4 rounded-xl border border-white/10 opacity-100">1. Servicios OK</div>
+                <div class="flex-1 bg-white/5 p-4 rounded-xl border border-white/10 opacity-100">2. Horarios OK</div>
+                <div class="flex-1 bg-white/5 p-4 rounded-xl border border-white/10 animate-pulse">3. Conexión WhatsApp...</div>
+                <div class="flex-1 bg-white/5 p-4 rounded-xl border border-white/10 opacity-30 italic">4. Go Live</div>
             </div>
         </div>
     </main>
