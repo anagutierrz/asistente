@@ -3,116 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Asistente | Operations System - IA para Clínicas</title>
+    <title>Asistente | Operations System - AI Appointment Closer</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Inter', sans-serif; }
-        
-        /* Degradado exacto del logo: Púrpura a Naranja */
-        .bg-gradient-asistente {
-            background: linear-gradient(135deg, #7c2ae8 0%, #fa8c47 100%);
-        }
-        
+        .bg-gradient-asistente { background: linear-gradient(135deg, #7c2ae8 0%, #fa8c47 100%); }
         .text-gradient-asistente {
             background: linear-gradient(135deg, #7c2ae8 0%, #fa8c47 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-
-        .border-gradient-asistente {
-            border-image: linear-gradient(135deg, #7c2ae8 0%, #fa8c47 100%) 1;
-        }
-
-        .btn-shadow {
-            shadow-color: rgba(124, 42, 232, 0.4);
-        }
     </style>
 </head>
-<body class="bg-[#fafafa] text-[#1a1a1a] antialiased">
-
+<body class="bg-slate-50 text-slate-900 antialiased">
     <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-md border-b border-slate-100">
-        <div class="max-w-7xl mx-auto flex justify-between items-center py-5 px-8">
-            <div class="flex items-center gap-3">
+        <div class="max-w-7xl mx-auto flex justify-between items-center py-4 px-8">
+            <div class="flex items-center gap-2">
                 <div class="w-10 h-10 bg-gradient-asistente rounded-xl flex items-center justify-center text-white shadow-lg">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
                     </svg>
                 </div>
                 <div class="flex flex-col leading-none">
-                    <span class="text-2xl font-black tracking-tighter">Asistente</span>
-                    <span class="text-[9px] font-bold text-slate-400 uppercase tracking-[0.2em] italic">Operations System</span>
+                    <span class="text-xl font-black uppercase">Asistente</span>
+                    <span class="text-[9px] font-bold text-slate-400 uppercase tracking-widest italic">Operations System</span>
                 </div>
             </div>
-
-            <div class="hidden md:flex gap-10 font-bold text-sm text-slate-500 uppercase tracking-widest">
-                <a href="#beneficios" class="hover:text-purple-600 transition">Beneficios</a>
-                <a href="precios.html" class="text-purple-600 hover:text-orange-500 transition">Ver Planes</a>
+            <div class="hidden md:flex gap-8 font-bold text-xs uppercase tracking-widest text-slate-500">
+                <a href="#solucion" class="hover:text-purple-600 transition">Solución</a>
+                <a href="precios.html" class="hover:text-purple-600 transition">Precios</a>
             </div>
-
-            <a href="dashboard.html" class="bg-[#1a1a1a] text-white px-6 py-2.5 rounded-full font-bold text-sm hover:scale-105 transition active:scale-95 shadow-xl">
-                Login Clínica
-            </a>
+            <a href="precios.html" class="bg-slate-900 text-white px-6 py-2 rounded-full font-bold text-sm">Probar Demo</a>
         </div>
     </nav>
 
-    <header class="relative pt-48 pb-32 px-6 overflow-hidden">
-        <div class="absolute top-0 -left-20 w-96 h-96 bg-purple-200/30 rounded-full blur-[100px]"></div>
-        <div class="absolute bottom-0 -right-20 w-96 h-96 bg-orange-200/20 rounded-full blur-[100px]"></div>
-
-        <div class="max-w-6xl mx-auto text-center relative z-10">
-            <h1 class="text-6xl md:text-[100px] font-[900] tracking-[calc(-0.05em)] leading-[0.9] mb-10">
-                Tu WhatsApp en <br>
-                <span class="text-gradient-asistente italic tracking-tighter">Piloto Automático</span>
-            </h1>
-            
-            <p class="text-lg md:text-2xl text-slate-500 max-w-3xl mx-auto font-medium mb-12 leading-relaxed">
-                El "Closer" de citas definitivo para estéticas. <br class="hidden md:block">
-                IA que califica y agenda mientras tú y tu equipo <span class="text-[#1a1a1a] font-bold italic">descansan.</span>
-            </p>
-
-            <div class="flex flex-col sm:flex-row justify-center gap-6">
-                <a href="precios.html" class="bg-gradient-asistente text-white px-12 py-5 rounded-2xl text-xl font-extrabold shadow-2xl shadow-purple-200 hover:scale-105 transition transform active:scale-95">
-                    Ver Precios y Planes
-                </a>
-                <button class="bg-white border-2 border-slate-200 text-[#1a1a1a] px-12 py-5 rounded-2xl text-xl font-extrabold hover:bg-slate-50 transition">
-                    Ver Demo
-                </button>
-            </div>
+    <header class="pt-40 pb-20 px-6 text-center">
+        <h1 class="text-6xl md:text-8xl font-black tracking-tighter mb-8 leading-none">
+            Tu recepción en <br><span class="text-gradient-asistente italic">Piloto Automático</span>
+        </h1>
+        <p class="text-xl text-slate-500 max-w-2xl mx-auto mb-10">
+            Convierte mensajes de WhatsApp en citas confirmadas 24/7 sin saturar a tu personal.
+        </p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+            <a href="precios.html" class="bg-gradient-asistente text-white px-10 py-5 rounded-2xl text-xl font-bold shadow-xl transition transform hover:scale-105">Ver Planes y Precios</a>
         </div>
     </header>
 
-    <section class="max-w-6xl mx-auto px-6 pb-24">
-        <div class="bg-[#1a1a1a] rounded-[3rem] p-3 shadow-2xl">
-            <div class="bg-[#242424] rounded-[2.5rem] p-10 border border-white/5">
-                <div class="flex justify-between items-center mb-12">
-                    <div class="flex gap-2">
-                        <div class="w-3 h-3 bg-red-500/50 rounded-full"></div>
-                        <div class="w-3 h-3 bg-yellow-500/50 rounded-full"></div>
-                        <div class="w-3 h-3 bg-green-500/50 rounded-full"></div>
-                    </div>
-                    <div class="text-[10px] text-slate-500 font-bold tracking-[0.3em] uppercase">Operations System Dashboard</div>
-                </div>
-
-                <div class="grid md:grid-cols-3 gap-8">
-                    <div class="bg-white/5 p-8 rounded-3xl border border-white/10">
-                        <p class="text-slate-400 text-xs font-bold uppercase mb-2">Citas Hoy</p>
-                        <p class="text-5xl font-black text-white italic">24</p>
-                    </div>
-                    <div class="bg-white/5 p-8 rounded-3xl border border-white/10">
-                        <p class="text-slate-400 text-xs font-bold uppercase mb-2">Ingresos IA</p>
-                        <p class="text-5xl font-black text-gradient-asistente italic">$2.4k</p>
-                    </div>
-                    <div class="bg-white/5 p-8 rounded-3xl border border-white/10 flex items-center justify-center">
-                        <div class="text-center">
-                            <div class="text-green-400 text-xs font-bold animate-pulse">● IA CONECTADA</div>
-                            <p class="text-[10px] text-slate-500 uppercase mt-1">WhatsApp API OK</p>
-                        </div>
-                    </div>
-                </div>
+    <section id="solucion" class="py-20 bg-white border-y border-slate-100">
+        <div class="max-w-7xl mx-auto px-8 grid md:grid-cols-3 gap-12 text-center">
+            <div>
+                <div class="text-4xl mb-4">💬</div>
+                <h3 class="font-bold text-xl mb-2 text-slate-900">Atención 24/7</h3>
+                <p class="text-slate-500 text-sm">Responde al instante incluso fuera de horario comercial.</p>
+            </div>
+            <div>
+                <div class="text-4xl mb-4">📅</div>
+                <h3 class="font-bold text-xl mb-2 text-slate-900">Agendamiento IA</h3>
+                <p class="text-slate-500 text-sm">Identifica el servicio y agenda automáticamente según tu disponibilidad.</p>
+            </div>
+            <div>
+                <div class="text-4xl mb-4">✅</div>
+                <h3 class="font-bold text-xl mb-2 text-slate-900">Recordatorios</h3>
+                <p class="text-slate-500 text-sm">Reduce cancelaciones enviando confirmaciones y recordatorios automáticos.</p>
             </div>
         </div>
     </section>
-
 </body>
 </html>
