@@ -1,26 +1,106 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
-    <title>Asistente | Operations System</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asistente | Operations System - AI Appointment Closer</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        /* Recuperando tus colores exactos */
+        .bg-gradient-brand {
+            background: linear-gradient(135deg, #6d28d9 0%, #f97316 100%);
+        }
+        .text-gradient-brand {
+            background: linear-gradient(135deg, #6d28d9 0%, #f97316 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .border-brand {
+            border-image: linear-gradient(135deg, #6d28d9 0%, #f97316 100%) 1;
+        }
+        .shadow-brand {
+            shadow-color: rgba(109, 40, 217, 0.3);
+        }
+    </style>
 </head>
-<body class="bg-slate-50">
-    <nav class="flex justify-between p-6 bg-white border-b">
-        <div class="flex items-center gap-2 font-bold text-xl">
-            <span class="bg-black text-white p-1 rounded">✓</span> Asistente
-        </div>
-        <div class="space-x-6 text-sm font-medium pt-2">
-            <a href="#beneficios" class="text-slate-600">Beneficios</a>
-            <a href="precios.html" class="text-purple-600">Ver Planes</a>
-            <a href="dashboard.html" class="bg-slate-900 text-white px-4 py-2 rounded-lg">Login Clínica</a>
+<body class="bg-slate-50 text-slate-900 antialiased">
+
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-200">
+        <div class="max-w-7xl mx-auto flex justify-between items-center py-4 px-6 md:px-10">
+            <a href="index.html" class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-gradient-brand rounded-xl flex items-center justify-center text-white shadow-lg">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                    </svg>
+                </div>
+                <div class="flex flex-col leading-none">
+                    <span class="text-xl font-extrabold tracking-tighter uppercase">Asistente</span>
+                    <span class="text-[10px] font-medium text-slate-400 italic uppercase tracking-[0.2em]">Operations System</span>
+                </div>
+            </a>
+
+            <div class="hidden md:flex items-center gap-8 font-semibold text-sm">
+                <a href="#solucion" class="text-slate-600 hover:text-purple-600 transition">Tecnología</a>
+                <a href="precios.html" class="text-slate-600 hover:text-purple-600 transition">Precios</a>
+                <a href="precios.html" class="bg-gradient-brand text-white px-6 py-2.5 rounded-full shadow-md hover:opacity-90 transition active:scale-95">Probar Ahora</a>
+            </div>
         </div>
     </nav>
 
-    <header class="py-20 text-center px-4">
-        <h1 class="text-6xl font-black tracking-tighter mb-6">Tu WhatsApp en <span class="text-purple-600 italic">Piloto Automático</span></h1>
-        <p class="text-xl text-slate-500 max-w-2xl mx-auto mb-10">El "Closer" de citas definitivo para estéticas. IA que agenda mientras tú descansas.</p>
-        <a href="precios.html" class="bg-purple-600 text-white px-8 py-4 rounded-2xl font-bold text-lg shadow-xl shadow-purple-200">Ver Precios</a>
+    <header class="pt-40 pb-24 px-6">
+        <div class="max-w-5xl mx-auto text-center">
+            <h1 class="text-6xl md:text-8xl font-[900] mb-8 tracking-tighter leading-none">
+                Agendamiento <br>
+                <span class="text-gradient-brand italic">Inteligente</span>
+            </h1>
+            <p class="text-xl text-slate-600 mb-12 max-w-2xl mx-auto font-medium">
+                La IA que transforma tu WhatsApp en una máquina de cerrar citas. 
+                Diseñado exclusivamente para el sector <span class="text-slate-900 font-bold underline decoration-orange-500">estético y salud.</span>
+            </p>
+
+            <div class="flex flex-col sm:row justify-center gap-4">
+                <a href="precios.html" class="bg-gradient-brand text-white px-12 py-5 rounded-2xl text-xl font-bold shadow-2xl hover:scale-105 transition-transform">
+                    Ver Planes y Precios
+                </a>
+            </div>
+        </div>
     </header>
+
+    <section id="solucion" class="py-20 px-6 max-w-6xl mx-auto">
+        <div class="bg-white p-2 rounded-[2.5rem] shadow-2xl border border-slate-200">
+            <div class="bg-slate-900 rounded-[2.2rem] p-8 text-white">
+                <div class="flex justify-between items-center mb-10">
+                    <div class="flex gap-2">
+                        <div class="w-3 h-3 bg-red-500 rounded-full"></div>
+                        <div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
+                        <div class="w-3 h-3 bg-green-500 rounded-full"></div>
+                    </div>
+                    <span class="text-xs font-black uppercase tracking-widest text-slate-400 italic">Asistente OS - Live Preview</span>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-10">
+                    <div class="space-y-4">
+                        <div class="h-2 bg-slate-800 rounded w-1/2"></div>
+                        <div class="text-4xl font-black italic">142 Citas</div>
+                        <p class="text-slate-400 text-sm italic">Cerradas por IA este mes sin intervención humana.</p>
+                        <div class="w-full bg-slate-800 h-40 rounded-2xl border border-slate-700 flex items-center justify-center">
+                            <span class="text-gradient-brand font-bold uppercase tracking-tighter">Gráfico de Conversión</span>
+                        </div>
+                    </div>
+                    <div class="bg-slate-800/50 p-6 rounded-3xl border border-slate-700">
+                        <h4 class="text-orange-500 font-bold mb-4 uppercase text-xs tracking-widest italic">Última Actividad</h4>
+                        <div class="space-y-4 text-xs font-mono">
+                            <p class="text-green-400">[21:32] Nuevo paciente agendado: "Botox"</p>
+                            <p class="text-slate-400">[21:30] Chat analizado: Calificación 9/10</p>
+                            <p class="text-slate-400">[21:28] Recordatorio enviado a Sofía...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
 </body>
 </html>
