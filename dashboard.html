@@ -3,56 +3,123 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin | Asistente Operations System</title>
+    <title>Panel de Control | Asistente OS</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #F8FAFC; }
+        .bg-gradient-brand { background: linear-gradient(135deg, #7c2ae8 0%, #fa8c47 100%); }
+        .text-gradient-brand {
+            background: linear-gradient(135deg, #7c2ae8 0%, #fa8c47 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .sidebar-link-active { background: rgba(124, 42, 232, 0.1); color: #7c2ae8; border-right: 4px solid #7c2ae8; }
+    </style>
 </head>
-<body class="bg-slate-50 flex flex-col md:flex-row h-screen overflow-hidden">
-    <aside class="w-full md:w-72 bg-[#121826] text-white p-6 md:p-8 flex flex-col border-b md:border-b-0 md:border-r border-slate-800">
-        <div class="mb-8 md:mb-12 flex justify-between items-center">
-            <h1 class="text-xl md:text-2xl font-black uppercase tracking-tighter">Asistente <span class="text-purple-500 italic">OS</span></h1>
-            <div class="md:hidden"> </div>
+<body class="flex h-screen overflow-hidden">
+
+    <aside class="w-64 bg-white border-r border-slate-200 flex flex-col hidden md:flex">
+        <div class="p-8">
+            <div class="flex items-center gap-2">
+                <div class="w-8 h-8 bg-gradient-brand rounded-lg flex items-center justify-center text-white font-bold shadow-md">✓</div>
+                <span class="text-xl font-extrabold tracking-tighter">Asistente<span class="text-slate-400 font-normal">OS</span></span>
+            </div>
         </div>
-        
-        <nav class="space-y-2 md:space-y-4 flex-grow overflow-x-auto md:overflow-x-visible flex md:flex-col gap-4 md:gap-0 pb-4 md:pb-0">
-            <a href="dashboard.html" class="flex-shrink-0 md:flex-shrink p-4 bg-brand-gradient rounded-2xl font-black shadow-lg text-xs md:text-base">Resumen</a>
-            <a href="ajustes-perfil.html" class="flex-shrink-0 md:flex-shrink p-4 text-slate-400 hover:text-white transition font-bold text-xs md:text-base">Configurar IA</a>
-            <a href="calendario-google.html" class="flex-shrink-0 md:flex-shrink p-4 text-slate-400 hover:text-white transition font-bold text-xs md:text-base">Calendario</a>
-            <a href="ajustes-conexion.html" class="flex-shrink-0 md:flex-shrink p-4 text-slate-400 hover:text-white transition font-bold text-xs md:text-base">WhatsApp</a>
+
+        <nav class="flex-grow px-4 space-y-1">
+            <a href="dashboard.html" class="flex items-center gap-3 px-4 py-3 rounded-xl sidebar-link-active font-semibold transition">
+                <span>Resumen</span>
+            </a>
+            <a href="conversaciones.html" class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-500 hover:bg-slate-50 transition font-semibold">
+                <span>Conversaciones</span>
+            </a>
+            <a href="calendario-google.html" class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-500 hover:bg-slate-50 transition font-semibold">
+                <span>Calendario</span>
+            </a>
+            <a href="ajustes-perfil.html" class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-500 hover:bg-slate-50 transition font-semibold">
+                <span>Configurar IA</span>
+            </a>
         </nav>
-        
-        <div class="hidden md:block text-[10px] text-slate-600 font-black uppercase tracking-widest mt-auto italic">v 2.0.26</div>
+
+        <div class="p-6 border-t border-slate-100">
+            <div class="flex items-center gap-3 p-3 rounded-2xl bg-slate-50">
+                <div class="w-8 h-8 rounded-full bg-slate-200"></div>
+                <div class="overflow-hidden">
+                    <p class="text-xs font-bold text-slate-900 truncate">Clínica Bella</p>
+                    <p class="text-[10px] text-slate-400 uppercase font-black">Plan Pro</p>
+                </div>
+            </div>
+        </div>
     </aside>
 
-    <main class="flex-1 p-6 md:p-12 overflow-y-auto">
-        <header class="flex flex-col md:row justify-between items-start md:items-center mb-10 gap-4">
-            <h2 class="text-3xl md:text-4xl font-[900] tracking-tighter uppercase underline decoration-orange-500 decoration-4 underline-offset-8">Resumen Operativo</h2>
-            <div class="flex items-center gap-3 bg-white px-4 py-2 rounded-full border border-slate-200 shadow-sm">
-                <span class="status-pulse"></span>
-                <span class="text-[10px] font-black uppercase text-slate-500 tracking-widest">IA Conectada</span>
+    <main class="flex-1 overflow-y-auto">
+        <header class="h-20 bg-white border-b border-slate-100 px-10 flex items-center justify-between sticky top-0 z-10">
+            <h2 class="text-lg font-bold text-slate-800 tracking-tight">Resumen Operativo</h2>
+            <div class="flex items-center gap-4">
+                <div class="flex items-center gap-2 px-3 py-1.5 bg-green-50 rounded-full border border-green-100">
+                    <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+                    <span class="text-[10px] font-black text-green-700 uppercase tracking-widest">IA Conectada</span>
+                </div>
+                <a href="index.html" class="text-xs font-bold text-slate-400 hover:text-slate-600 transition">Cerrar Sesión</a>
             </div>
         </header>
 
-        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8 mb-12">
-            <div class="bg-white p-6 md:p-8 rounded-[2rem] shadow-sm border border-slate-100 text-center">
-                <p class="text-[9px] font-black uppercase text-slate-400 tracking-widest mb-2 italic">Citas</p>
-                <p class="text-3xl md:text-5xl font-black text-slate-900">156</p>
-            </div>
-            <div class="bg-white p-6 md:p-8 rounded-[2rem] shadow-sm border border-slate-100 text-center">
-                <p class="text-[9px] font-black uppercase text-slate-400 tracking-widest mb-2 italic">Conversión</p>
-                <p class="text-3xl md:text-5xl font-black text-purple-600 italic">68%</p>
-            </div>
+        <div class="p-10 max-w-7xl mx-auto space-y-10">
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white p-8 rounded-[2rem] border border-slate-100 shadow-sm">
+                    <p class="text-[10px] font-black uppercase text-slate-400 tracking-[0.2em] mb-4">Citas Agendadas</p>
+                    <div class="flex items-baseline gap-2">
+                        <span class="text-4xl font-extrabold text-slate-900">156</span>
+                        <span class="text-xs font-bold text-green-500 text-sm italic">+12%</span>
+                    </div>
+                </div>
+                <div class="bg-white p-8 rounded-[2rem] border border-slate-100 shadow-sm">
+                    <p class="text-[10px] font-black uppercase text-slate-400 tracking-[0.2em] mb-4">Conversión Chat</p>
+                    <span class="text-4xl font-extrabold text-gradient-brand">68%</span>
+                </div>
+                <div class="bg-white p-8 rounded-[2rem] border border-slate-100 shadow-sm">
+                    <p class="text-[10px] font-black uppercase text-slate-400 tracking-[0.2em] mb-4">Ocupación Agenda</p>
+                    <span class="text-4xl font-extrabold text-slate-900">92%</span>
+                </div>
+                <div class="bg-white p-8 rounded-[2rem] border border-slate-100 shadow-sm">
+                    <p class="text-[10px] font-black uppercase text-slate-400 tracking-[0.2em] mb-4">Eficiencia IA</p>
+                    <span class="text-4xl font-extrabold text-slate-900">24/7</span>
+                </div>
             </div>
 
-        <div class="bg-[#121826] rounded-[2rem] p-6 md:p-10 text-white">
-            <h3 class="text-lg font-black uppercase text-orange-400 mb-6 italic">Implementación</h3>
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
-                <a href="ajustes-perfil.html" class="p-4 bg-white/5 border border-white/10 rounded-xl text-xs font-bold text-green-400 block text-center">1. Perfil OK</a>
-                <a href="ajustes-perfil.html#horarios" class="p-4 bg-white/5 border border-white/10 rounded-xl text-xs font-bold text-green-400 block text-center">2. Horarios OK</a>
-                <a href="ajustes-conexion.html" class="p-4 bg-white/5 border border-white/20 rounded-xl text-xs font-bold text-orange-400 animate-pulse block text-center">3. Conectar WhatsApp</a>
-                <div class="p-4 bg-white/5 border border-white/5 rounded-xl text-xs font-bold text-slate-600 block text-center opacity-30 italic">4. Go Live</div>
+            <div class="bg-[#0F172A] rounded-[2.5rem] p-10 text-white overflow-hidden relative">
+                <div class="absolute top-0 right-0 w-64 h-64 bg-purple-500/10 blur-[80px] rounded-full"></div>
+                <h3 class="text-sm font-black uppercase tracking-[0.3em] text-orange-400 mb-10 italic">Estado de Activación del Sistema</h3>
+                
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-4 relative z-10">
+                    <div class="flex flex-col gap-4 p-6 bg-white/5 rounded-2xl border border-white/10 border-l-4 border-l-green-500">
+                        <span class="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Paso 01</span>
+                        <p class="text-sm font-bold">Servicios Configurados</p>
+                        <span class="text-[10px] text-green-400 font-bold uppercase italic">Completado</span>
+                    </div>
+                    <div class="flex flex-col gap-4 p-6 bg-white/5 rounded-2xl border border-white/10 border-l-4 border-l-green-500">
+                        <span class="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Paso 02</span>
+                        <p class="text-sm font-bold">Horarios Definidos</p>
+                        <span class="text-[10px] text-green-400 font-bold uppercase italic">Completado</span>
+                    </div>
+                    <div class="flex flex-col gap-4 p-6 bg-white/10 rounded-2xl border border-purple-500/50 border-l-4 border-l-purple-500 animate-pulse">
+                        <span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest text-purple-400">Paso 03</span>
+                        <p class="text-sm font-bold text-white">Conexión WhatsApp</p>
+                        <a href="ajustes-conexion.html" class="text-[10px] text-white font-black underline uppercase italic">Configurar ahora</a>
+                    </div>
+                    <div class="flex flex-col gap-4 p-6 bg-white/5 rounded-2xl border border-white/5 opacity-30">
+                        <span class="text-[10px] font-bold text-slate-600 uppercase tracking-widest">Paso 04</span>
+                        <p class="text-sm font-bold">Sistema en Vivo</p>
+                        <span class="text-[10px] text-slate-500 font-bold uppercase italic">Pendiente</span>
+                    </div>
+                </div>
             </div>
+
         </div>
     </main>
+</body>
+</html>
 </body>
 </html>
