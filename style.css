@@ -1,0 +1,13 @@
+<style>
+    .bg-gradient-asistente {
+        background: linear-gradient(135deg, #7c2ae8 0%, #fa8c47 100%);
+    }
+    .text-gradient-asistente {
+        background: linear-gradient(135deg, #7c2ae8 0%, #fa8c47 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    .btn-principal {
+        @apply bg-gradient-asistente text-white px-10 py-5 rounded-2xl text-xl font-extrabold shadow-2xl transition transform hover:scale-105 active:scale-95;
+    }
+</style>
