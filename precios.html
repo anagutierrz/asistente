@@ -2,63 +2,85 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Planes | Asistente Operations System</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planes y Precios | Asistente Operations System</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <style>
-        .bg-gradient-asistente { background: linear-gradient(135deg, #7c2ae8 0%, #fa8c47 100%); }
-        .text-gradient-asistente { background: linear-gradient(135deg, #7c2ae8 0%, #fa8c47 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        body { font-family: 'Inter', sans-serif; background-color: #fcfcfc; }
+        .bg-gradient-brand { background: linear-gradient(135deg, #7c2ae8 0%, #fa8c47 100%); }
+        .text-gradient-brand {
+            background: linear-gradient(135deg, #7c2ae8 0%, #fa8c47 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .card-popular { border: 3px solid #7c2ae8; transform: scale(1.05); }
     </style>
 </head>
-<body class="bg-slate-50">
-    <nav class="p-6 bg-white border-b mb-12">
-        <div class="max-w-7xl mx-auto flex justify-between items-center italic">
-            <a href="index.html" class="font-black text-xl uppercase tracking-tighter">Asistente <span class="text-slate-400 font-light text-xs">OS</span></a>
-            <a href="index.html" class="text-sm font-bold text-purple-600">← Volver</a>
-        </div>
+<body class="antialiased">
+
+    <nav class="w-full bg-white border-b border-slate-100 py-5 px-10 flex justify-between items-center">
+        <a href="index.html" class="flex items-center gap-3 no-underline">
+            <div class="w-10 h-10 bg-gradient-brand rounded-xl flex items-center justify-center text-white font-bold">✓</div>
+            <span class="text-2xl font-[900] tracking-tighter uppercase text-slate-900">Asistente</span>
+        </a>
+        <a href="login.html" class="text-xs font-black uppercase tracking-widest text-slate-500 hover:text-purple-600">Login Clínica</a>
     </nav>
 
-    <main class="max-w-7xl mx-auto px-8 pb-20">
-        <div class="text-center mb-16">
-            <h2 class="text-5xl font-black mb-4">Escoge tu motor de <span class="text-gradient-asistente">crecimiento</span></h2>
-            <p class="text-slate-500">Diseñado específicamente para el flujo de pacientes reales.</p>
+    <section class="py-24 px-6 max-w-7xl mx-auto">
+        <div class="text-center mb-20">
+            <h1 class="text-5xl md:text-7xl font-[900] tracking-tighter uppercase mb-6">Planes de <span class="text-gradient-brand italic">Inversión</span></h1>
+            <p class="text-slate-500 max-w-xl mx-auto font-medium italic">Sustituye el costo de una recepción física (RD$25k+) por una infraestructura digital de alto rendimiento.</p>
         </div>
 
-        <div class="grid md:grid-cols-3 gap-8 items-end">
-            <div class="bg-white p-8 rounded-3xl border border-slate-200">
-                <h3 class="font-bold text-2xl mb-2">Starter</h3>
-                <div class="text-4xl font-black mb-6 text-slate-900">$99<span class="text-sm text-slate-400">/mes</span></div>
-                <ul class="space-y-4 mb-8 text-sm text-slate-600 italic">
-                    <li>✓ Hasta 100 citas mensuales</li>
-                    <li>✓ Conexión a 1 calendario</li>
-                    <li>✓ WhatsApp Business API</li>
+        <div class="grid md:grid-cols-3 gap-8 items-center">
+            
+            <div class="bg-white p-10 rounded-[2.5rem] border border-slate-100 shadow-sm">
+                <h3 class="text-[10px] font-black uppercase tracking-[0.3em] text-slate-400 mb-4 italic">Starter IA</h3>
+                <div class="mb-8">
+                    <span class="text-4xl font-black text-slate-900 italic">RD$ 8,900</span>
+                    <span class="text-xs font-bold text-slate-400">/mes</span>
+                </div>
+                <ul class="space-y-4 mb-10 text-sm font-bold text-slate-600 italic">
+                    <li class="flex items-center gap-2"><span class="text-green-500">✓</span> Respuestas 24/7 WhatsApp</li>
+                    <li class="flex items-center gap-2"><span class="text-green-500">✓</span> Calificación de Leads</li>
+                    <li class="flex items-center gap-2 text-slate-300">✕ Conexión Google Calendar</li>
                 </ul>
-                <button class="w-full py-4 rounded-xl border-2 border-slate-900 font-bold hover:bg-slate-900 hover:text-white transition">Seleccionar</button>
+                <a href="login.html" class="block text-center py-4 border-2 border-slate-900 rounded-2xl font-black text-xs uppercase tracking-widest hover:bg-slate-900 hover:text-white transition">Comenzar</a>
             </div>
 
-            <div class="bg-white p-10 rounded-3xl border-4 border-purple-500 shadow-2xl transform md:scale-105 relative">
-                <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-asistente text-white px-6 py-1 rounded-full text-[10px] font-black uppercase">Más Popular</div>
-                <h3 class="font-bold text-2xl mb-2">Pro Operations</h3>
-                <div class="text-5xl font-black mb-6 text-slate-900">$199<span class="text-sm text-slate-400">/mes</span></div>
-                <ul class="space-y-4 mb-8 text-sm text-slate-900 font-bold italic">
-                    <li>✓ Citas ILIMITADAS</li>
-                    <li>✓ Gestión de pagos integrada</li>
-                    <li>✓ Re-engagement de pacientes</li>
+            <div class="bg-white p-12 rounded-[3rem] shadow-2xl relative card-popular">
+                <div class="absolute -top-5 left-1/2 -translate-x-1/2 bg-gradient-brand text-white px-6 py-2 rounded-full text-[10px] font-black uppercase tracking-widest">Recomendado</div>
+                <h3 class="text-[10px] font-black uppercase tracking-[0.3em] text-purple-600 mb-4 italic">Business OS</h3>
+                <div class="mb-8">
+                    <span class="text-5xl font-black text-slate-900 italic">RD$ 14,900</span>
+                    <span class="text-xs font-bold text-slate-400">/mes</span>
+                </div>
+                <ul class="space-y-5 mb-12 text-sm font-bold text-slate-800 italic">
+                    <li class="flex items-center gap-2"><span class="text-purple-600">✓</span> Agendamiento Automático</li>
+                    <li class="flex items-center gap-2"><span class="text-purple-600">✓</span> Google Calendar Sync</li>
+                    <li class="flex items-center gap-2"><span class="text-purple-600">✓</span> Monitor de Conversaciones</li>
+                    <li class="flex items-center gap-2"><span class="text-purple-600">✓</span> Hasta 3 agendas clínicas</li>
                 </ul>
-                <button class="w-full py-4 rounded-xl bg-gradient-asistente text-white font-bold shadow-lg">Comenzar Pro</button>
+                <a href="login.html" class="block text-center py-5 bg-gradient-brand text-white rounded-[1.5rem] font-black text-sm uppercase tracking-widest shadow-xl hover:scale-105 transition">Activar Ahora</a>
             </div>
 
-            <div class="bg-slate-900 p-8 rounded-3xl text-white">
-                <h3 class="font-bold text-2xl mb-2">Clinic</h3>
-                <div class="text-4xl font-black mb-6">Custom</div>
-                <ul class="space-y-4 mb-8 text-sm text-slate-400 italic">
-                    <li>✓ Multi-sede y multi-usuario</li>
-                    <li>✓ Integraciones HIS avanzadas</li>
-                    <li>✓ Soporte prioritario 24/7</li>
+            <div class="bg-white p-10 rounded-[2.5rem] border border-slate-100 shadow-sm">
+                <h3 class="text-[10px] font-black uppercase tracking-[0.3em] text-slate-400 mb-4 italic">Enterprise</h3>
+                <div class="mb-8">
+                    <span class="text-4xl font-black text-slate-900 italic">RD$ 24,900</span>
+                    <span class="text-xs font-bold text-slate-400">/mes</span>
+                </div>
+                <ul class="space-y-4 mb-10 text-sm font-bold text-slate-600 italic">
+                    <li class="flex items-center gap-2"><span class="text-green-500">✓</span> Agendas Ilimitadas</li>
+                    <li class="flex items-center gap-2"><span class="text-green-500">✓</span> Personalización de Voz IA</li>
+                    <li class="flex items-center gap-2"><span class="text-green-500">✓</span> Soporte VIP en RD</li>
                 </ul>
-                <button class="w-full py-4 rounded-xl bg-white text-slate-900 font-bold">Contactar</button>
+                <a href="login.html" class="block text-center py-4 border-2 border-slate-900 rounded-2xl font-black text-xs uppercase tracking-widest hover:bg-slate-900 hover:text-white transition">Contactar</a>
             </div>
+
         </div>
-    </main>
+    </section>
+
 </body>
 </html>
